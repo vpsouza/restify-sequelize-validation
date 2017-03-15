@@ -1,0 +1,29 @@
+{
+  "name": "restify-sequelize-validation",
+  "version": "0.0.1",
+  "description": "Restify Sequelize Model Validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpsouza/restify-sequelize-validation.git"
+  },
+  "author": "Vinicius Piedade de Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vpsouza/restify-sequelize-validation/issues"
+  },
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "homepage": "https://github.com/vpsouza/restify-sequelize-validation#readme",
+  "dependencies": {
+    "restify": "^4.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
