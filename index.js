@@ -45,9 +45,13 @@ module.exports = function (server, modelName, models){
                 if(includedModels.length > 0){
                     let arrayToBeValidated = [];
                     includedModels.forEach(function(includedModel){
-                        arrayToBeValidated = arrayToBeValidated.concat(req.body[includedModel.relName].map(function(elm){
-                            return includedModel.target.build(elm);
-                        }));
+                        if(Array.isArray(req.body[includedModel.relName])){
+                            Array.prototype.push.apply(arrayToBeValidated, req.body[includedModel.relName].map(function(elm){
+                                return includedModel.target.build(elm);
+                            }));
+                        } else {
+                            arrayToBeValidated.push(includedModel.target.build(req.body[includedModel.relName]));
+                        }
                     });
 
                     Promise.all(arrayToBeValidated.map(function(elm){
