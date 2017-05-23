@@ -1,6 +1,6 @@
 {
   "name": "restify-sequelize-validation",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Aplies Sequelize Model Validation on a Multitenancy Node JS Application based on Restify",
   "main": "index.js",
   "scripts": {
