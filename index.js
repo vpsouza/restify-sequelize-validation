@@ -5,6 +5,7 @@ module.exports = (appAuthSecret, server, modelName, models) => {
 	const getTenant = require('./lib/get-tenant') (appAuthSecret);
 	const getModelInstance = require('./lib/get-model-instance')(server,modelName,models);
 	const modelInstanceValidate = require('./lib/model-instance-validate');
+	const includedModelsValidate = require('./lib/included-models-validate');
     
     return function(req,res,next){
         if(!req.body){
